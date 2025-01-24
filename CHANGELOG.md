@@ -1,5 +1,55 @@
 # @apollo/client
 
+## 4.0.0-alpha.0
+
+### Major Changes
+
+- [#12222](https://github.com/apollographql/apollo-client/pull/12222) [`d1a9054`](https://github.com/apollographql/apollo-client/commit/d1a905461d4378522c3257de00afba2ae8decd22) Thanks [@jerelmiller](https://github.com/jerelmiller)! - Drop support for React 16.
+
+- [#12224](https://github.com/apollographql/apollo-client/pull/12224) [`51e6c0f`](https://github.com/apollographql/apollo-client/commit/51e6c0f8657d20cedc570c6e9a244f877047dd61) Thanks [@jerelmiller](https://github.com/jerelmiller)! - Remove deprecated `partialRefetch` option.
+
+- [#12211](https://github.com/apollographql/apollo-client/pull/12211) [`c2736db`](https://github.com/apollographql/apollo-client/commit/c2736db3ad6f8b6e56f065682d5b76614f41bfd4) Thanks [@jerelmiller](https://github.com/jerelmiller)! - Remove the deprecated `graphql`, `withQuery`, `withMutation`, `withSubscription`, and `withApollo` hoc components. Use the provided React hooks instead.
+
+- [#12262](https://github.com/apollographql/apollo-client/pull/12262) [`10ef733`](https://github.com/apollographql/apollo-client/commit/10ef7338cdcbbaf75d806f426e9708c9e095c2da) Thanks [@jerelmiller](https://github.com/jerelmiller)! - Remove `itAsync` test utility.
+
+- [#12254](https://github.com/apollographql/apollo-client/pull/12254) [`0028ac0`](https://github.com/apollographql/apollo-client/commit/0028ac0147aaea9ab559f15630200a132b43da42) Thanks [@jerelmiller](https://github.com/jerelmiller)! - Changes the default `Accept` header to `application/graphql-response+json`.
+
+- [#12223](https://github.com/apollographql/apollo-client/pull/12223) [`69c1cb6`](https://github.com/apollographql/apollo-client/commit/69c1cb6f831941598987185238a299b050a364bd) Thanks [@jerelmiller](https://github.com/jerelmiller)! - Remove `subscribeAndCount` testing utility from `@apollo/client/testing`.
+
+- [#12300](https://github.com/apollographql/apollo-client/pull/12300) [`4d581e4`](https://github.com/apollographql/apollo-client/commit/4d581e4f5a3c5409e5f06a5f164beabdada150f1) Thanks [@jerelmiller](https://github.com/jerelmiller)! - Moves all React-related exports to the `@apollo/client/react` entrypoint and out of the main `@apollo/client` entrypoint. This prevents the need to install React in order to use the core client.
+
+  The following is a list of exports available in `@apollo/client` that should now import from `@apollo/client/react`.
+
+  - `ApolloConsumer`
+  - `ApolloProvider`
+  - `createQueryPreloader`
+  - `getApolloContext`
+  - `skipToken`
+  - `useApolloClient`
+  - `useBackgroundQuery`
+  - `useFragment`
+  - `useLazyQuery`
+  - `useLoadableQuery`
+  - `useMutation`
+  - `useQuery`
+  - `useQueryRefHandlers`
+  - `useReactiveVar`
+  - `useReadQuery`
+  - `useSubscription`
+  - `useSuspenseQuery`
+
+  The following is a list of exports available in `@apollo/client/testing` that should now import from `@apollo/client/testing/react`:
+
+  - `MockedProvider`
+
+- [#12211](https://github.com/apollographql/apollo-client/pull/12211) [`c2736db`](https://github.com/apollographql/apollo-client/commit/c2736db3ad6f8b6e56f065682d5b76614f41bfd4) Thanks [@jerelmiller](https://github.com/jerelmiller)! - Remove the deprecated `Query`, `Mutation`, and `Subscription` components. Use the provided React hooks instead.
+
+### Patch Changes
+
+- [#12292](https://github.com/apollographql/apollo-client/pull/12292) [`3abd944`](https://github.com/apollographql/apollo-client/commit/3abd944e4adde5d94d91133f2bf6ed1c7744f8c5) Thanks [@phryneas](https://github.com/phryneas)! - Remove unused dependency `response-iterator`
+
+- [#12287](https://github.com/apollographql/apollo-client/pull/12287) [`bf313a3`](https://github.com/apollographql/apollo-client/commit/bf313a39d342a73dc3e9b3db9415c71c2573db3f) Thanks [@phryneas](https://github.com/phryneas)! - Fixes an issue where `client.watchFragment`/`useFragment` with `@includes` crashes when a separate cache update writes to the conditionally included fields.
+
 ## 3.12.7
 
 ### Patch Changes
